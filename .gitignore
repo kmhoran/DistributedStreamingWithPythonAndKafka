@@ -1,4 +1,3 @@
 kafkaenv/
-index.html
-simple_consumer.py
+env/
 .vscode/
