@@ -13,8 +13,12 @@ consumer = KafkaConsumer(
 # Set the consumer in a Flask App
 app = Flask(__name__)
 
-@app.route('/video', methods=['GET'])
-def video():
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/video_feed', methods=['GET'])
+def video_feed():
     """
     This is the heart of our video display. Notice we set the mimetype to 
     multipart/x-mixed-replace. This tells Flask to replace any old images with 
